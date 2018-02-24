@@ -1,0 +1,20 @@
+<% include layout/header %>
+    <h1>Add People</h1>
+    <form method="POST" action="/peoples/add">
+        <label>Name</label>
+        <br>
+        <input type="text" name="fname">
+        <br>
+        <label>Age</label>
+        <br>
+        <input type="text" name="age">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+    <h1>Peoples</h1>
+    <ul>
+        <% peoples.forEach(function(people){ %>
+            <li><%= people.name %></li>   
+        <% }) %>
+    </ul>
+<% include layout/footer %>
